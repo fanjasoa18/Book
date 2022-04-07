@@ -8,17 +8,6 @@ $(function(){
         })
     })
 })
-    
-  
-  
-  
-  
-  
-  
-  
-
-  
-  
   
   // Enable pusher logging - don't include this in production
     Pusher.logToConsole = true;
