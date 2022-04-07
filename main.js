@@ -7,12 +7,15 @@ $(function(){
         $.post('book.php', {
             task: task.value,
             from: from.value,
-            to: to.value
+            to: to.value,
+            isDone: isDone.value
         }, function(){
             console.log('success...');
         })
 
         task.value = from.value = to.value = isDone.value = '';
+        task.focus();
+        // focus task on submit
     })
 })
   
