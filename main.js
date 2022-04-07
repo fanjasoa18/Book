@@ -7,11 +7,12 @@ $(function(){
         $.post('book.php', {
             task: task.value,
             from: from.value,
-            to: to.value,
-            isDone: isDone.value,
+            to: to.value
         }, function(){
             console.log('success...');
         })
+
+        task.value = from.value = to.value = isDone.value = '';
     })
 })
   
