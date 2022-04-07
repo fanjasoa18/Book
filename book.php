@@ -12,7 +12,12 @@
     $options
   );
 
- $text = $_POST['text'];
+ $data = '<tr>
+            <td>' . $_POST['task'] . '</td>
+            <td>' . $_POST['from'] . '</td>
+            <td>' . $_POST['to'] . '</td>
+            <td>' . $_POST['isDone']. '</td>
+          </tr>';
 
-  $pusher->trigger('app', 'on-click', $text);
+  $pusher->trigger('app', 'on-click', $data);
 ?>

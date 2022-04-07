@@ -1,8 +1,14 @@
 $(function(){
-    const [text, btn] = $('input, button');
+
+    const [task, from, to, isDone, btn] = document.querySelectorAll('input');
+
+
     $(btn).on('click', function(){
         $.post('book.php', {
-            text: $(text).val()
+            task: task.value,
+            from: from.value,
+            to: to.value,
+            isDone: isDone.value,
         }, function(){
             console.log('success...');
         })
@@ -20,6 +26,6 @@ $(function(){
     //app
     
     channel.bind('on-click', function(data){
-        $('#cible').append(data);
+        $('.taskList').append(data);
 
     })
